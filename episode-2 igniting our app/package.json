@@ -1,0 +1,27 @@
+{
+  "name": "episode-2-igniting-our-app",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "zest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jatinag17/learning-react-concepts.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "jatin ag",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jatinag17/learning-react-concepts/issues"
+  },
+  "homepage": "https://github.com/jatinag17/learning-react-concepts#readme",
+  "description": "",
+  "dependencies": {
+    "parcel": "^2.12.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
