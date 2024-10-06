@@ -28,7 +28,12 @@ import ReactDOM from "react-dom/client";
 //   "Namaste React 🚀"
 // );
 // jsx (transpiled before it reaches the js)--PARCEL-Babel
+// jsx =>React.createElement=>ReactElement- JS Object=>HTMLElement(render)
+// babel used to convert jsx to React.createElement 
+//Babel is a JS Compiler
+// babel is a transpiler(source code to another source code )
+
 const jsxheading =<h1 id="heading">Namaste react using jsx </h1>
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(jsxheading);
+root.render(jsxheading); 
