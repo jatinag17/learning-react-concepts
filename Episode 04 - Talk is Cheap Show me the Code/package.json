@@ -1,0 +1,30 @@
+{
+  "name": "episode-04---talk-is-cheap-show-me-the-code",
+  "version": "1.0.0",
+  "description": "react",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jatinag17/learning-react-concepts.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "jatin ag",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jatinag17/learning-react-concepts/issues"
+  },
+  "homepage": "https://github.com/jatinag17/learning-react-concepts#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
