@@ -7,6 +7,10 @@ import ReactDOM from "react-dom/client";
 //   "Namaste React 🚀"
 // );
 
+const Title=()=>
+(
+  <h1>title tag</h1>
+);
 
 
 
@@ -31,6 +35,8 @@ import ReactDOM from "react-dom/client";
 const HeadingComponent = ()=>
 (
   <div id="container">
+    {<Title/>  /*this a component compositon means component within the component */
+    }
  <h1 className="heading">namaste react Functional component</h1>
   </div>
 );
