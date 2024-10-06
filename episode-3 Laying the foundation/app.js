@@ -37,7 +37,11 @@ const data =api.getData(); // cross site scripting
 const HeadingComponent = ()=>
 (
   <div id="container">
-    {<Title/>  /*this a component compositon means component within the component */
+
+    {<Title/>
+    // <title></title> we can write like this also
+    
+    /*this a component compositon means component within the component */
     }
     <h2>{data}</h2>
  <h1 className="heading">namaste react Functional component</h1>
