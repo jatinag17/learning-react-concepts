@@ -22,12 +22,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 // React.createElement => object => HTMLElement(render)
-const heading = React.createElement(
-  "h1",
-  { id: "heading" },
-  "Namaste React 🚀"
-);
-console.log(heading); // Print a object
+// const heading = React.createElement(
+//   "h1",
+//   { id: "heading" },
+//   "Namaste React 🚀"
+// );
+// jsx (transpiled before it reaches the js)--PARCEL-Babel
+const jsxheading =<h1 id="heading">Namaste react using jsx </h1>
 
-
-root.render(heading);
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(jsxheading);
