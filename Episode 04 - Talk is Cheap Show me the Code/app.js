@@ -41,7 +41,8 @@ const Header=()=>
 // };
 // we can also give css in js
 
-const RestaurantCard=()=>{
+const RestaurantCard=(props)=>{
+  console.log(props)
   return (
     <div className="res-card" /* style={styleCard}*/>
       <img
@@ -49,49 +50,29 @@ const RestaurantCard=()=>{
         src="https://b.zmtcdn.com/data/pictures/chains/3/18875863/a7499d72024b4c6f7ef661ecf3cbc8c4_featured_v2.jpg?output-format=webp"
         alt="res-logo"
       />
-      <h3>Brijwasi foods</h3>
-      <h4>Sweets , North Indian</h4>
+      <h3>{props.resName}</h3>
+      <h4>{props.cuisine}</h4>
       <h4>4.5 stars</h4>
       <h4>30 mins</h4>
     </div>
   );
 };
 const Body=()=>{
-  return(
+  return (
     <div className="Body">
-    <div className="search">Search</div>
-    <div className="res-container">
-      <RestaurantCard/>
-      <RestaurantCard/>
-      <RestaurantCard/>
-      <RestaurantCard/>
-      <RestaurantCard/>
-      <RestaurantCard/>
-      <RestaurantCard/>
-      <RestaurantCard/>
-      <RestaurantCard/>
-      <RestaurantCard/>
-      <RestaurantCard/>
-      <RestaurantCard/>
-      <RestaurantCard/>
-      <RestaurantCard/>
-      <RestaurantCard/>
-      <RestaurantCard/>
-      <RestaurantCard/>
-      <RestaurantCard/>
-      <RestaurantCard/>
-      <RestaurantCard/>
-      <RestaurantCard/>
-      <RestaurantCard/>
-      <RestaurantCard/>
-      <RestaurantCard/>
-      <RestaurantCard/>
-      <RestaurantCard/>
-      <RestaurantCard/>
-      <RestaurantCard/>
-      <RestaurantCard/>
-      <RestaurantCard/>
-    </div>
+      <div className="search">Search</div>
+      <div className="res-container">
+        <RestaurantCard
+          // these are props(property) to a component
+          resName="Brijwasi foods"
+          cuisine="Sweets , North Indian"
+          />
+        <RestaurantCard 
+          resName="Sankar foods"
+          cuisine="Sweets , North Indian"
+        
+        />
+      </div>
     </div>
   );
 };
