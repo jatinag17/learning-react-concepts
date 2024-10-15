@@ -4,7 +4,21 @@ import resObj from "../utils/mockData";
 const Body = () => {
   return (
     <div className="Body">
-      <div className="search">Search</div>
+      {/* <div className="search">Search</div> */}
+      <div className="filter">
+        <button
+          className="filter-btn"
+          onClick={() => {
+            //filter logic
+            listOfRestaurants = listOfRestaurants.filter(
+              (res) => res.data.avgRating < 4
+            );
+            console.log(listOfRestaurants);
+          }}
+        >
+          Top Rated Restaurants
+        </button>
+      </div>
       <div className="res-container">
         <RestaurantCard
           // these are props(property) to a component
