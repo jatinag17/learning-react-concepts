@@ -1,19 +1,7 @@
 import RestaurantCard from "./RestaurantCard";
 import resObj from "../utils/mockData";
-import { useEffect } from "react";
 
 const Body = () => {
-  useEffect(() => {
-    fetchData();
-  }, []);
-  const fetchData = async () => {
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=27.4924134&lng=77.673673&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-    );
-
-    const json = await data.json();
-    console.log(json);
-  };
   return (
     <div className="Body">
       {/* <div className="search">Search</div> */}
@@ -40,6 +28,10 @@ const Body = () => {
           // timing="30 min"
           resData={resObj}
         />
+        <RestaurantCard resData={resObj} />
+        <RestaurantCard resData={resObj} />
+        <RestaurantCard resData={resObj} />
+        <RestaurantCard resData={resObj} />
         {/* <RestaurantCard 
           resName="Sankar foods"
           cuisine="Sweets , North Indian"
