@@ -27262,6 +27262,15 @@ const Header = ()=>{
     _s();
     // let btnName="login";
     const [btnNameReact, setBtnNameReact] = (0, _react.useState)("Login");
+    console.log("header render");
+    //if there is no dependency array then useEffect is called after every render
+    //if dependency array is empty then useEffect is called only on initial render
+    //if we put something in dependency array then useEffect is only called when dependency changes 
+    (0, _react.useEffect)(()=>{
+        console.log("useEffect called");
+    }, [
+        btnNameReact
+    ]);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "header",
         children: [
@@ -27272,12 +27281,12 @@ const Header = ()=>{
                     src: (0, _constants.LOGO_URL)
                 }, void 0, false, {
                     fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Header.js",
-                    lineNumber: 10,
+                    lineNumber: 17,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Header.js",
-                lineNumber: 9,
+                lineNumber: 16,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27288,28 +27297,28 @@ const Header = ()=>{
                             children: "Home"
                         }, void 0, false, {
                             fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Header.js",
-                            lineNumber: 14,
+                            lineNumber: 21,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: "About Us"
                         }, void 0, false, {
                             fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Header.js",
-                            lineNumber: 15,
+                            lineNumber: 22,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: "Contact Us"
                         }, void 0, false, {
                             fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Header.js",
-                            lineNumber: 16,
+                            lineNumber: 23,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: "Cart"
                         }, void 0, false, {
                             fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Header.js",
-                            lineNumber: 17,
+                            lineNumber: 24,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -27321,28 +27330,28 @@ const Header = ()=>{
                             children: btnNameReact
                         }, void 0, false, {
                             fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Header.js",
-                            lineNumber: 18,
+                            lineNumber: 25,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Header.js",
-                    lineNumber: 13,
+                    lineNumber: 20,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Header.js",
-                lineNumber: 12,
+                lineNumber: 19,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Header.js",
-        lineNumber: 8,
+        lineNumber: 15,
         columnNumber: 5
     }, undefined);
 };
-_s(Header, "fLb9w332fDG6L01gKBulzD5eR8k=");
+_s(Header, "qBUFNnZRatZ4wvcPIOqbTGy9X/M=");
 _c = Header;
 exports.default = Header;
 var _c;
