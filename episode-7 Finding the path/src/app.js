@@ -10,7 +10,13 @@ const AppLayout = () => {
   return (
     <div className="app">
       <Header />
+      {/**if path=/ */}
       <Body />
+      {/**if path=/about */}
+      <About/>
+      {/**if path=/contact */}
+      <Contact/>
+
     </div>
   );
 };
@@ -19,17 +25,19 @@ const appRouter = createBrowserRouter([
   {
     path: "/",
     element: <AppLayout />,
-    errorElement:<Error/>,
-  },
-  {
-    path: "/about",
-    element: <About />,
-  },
-  {
-    path:"/contact", 
-    element:<Contact/>,
-  },
-]);
+    children:[
+    {
+      path: "/about",
+      element: <About />,
+    },
+    {
+      path:"/contact", 
+      element:<Contact/>,
+    },
+    ],
+      errorElement:<Error/>,
+    },
+  ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(< RouterProvider router={appRouter} />);
