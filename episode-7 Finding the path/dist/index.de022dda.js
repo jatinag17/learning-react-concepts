@@ -2967,6 +2967,8 @@ var _contact = require("./component/Contact");
 var _contactDefault = parcelHelpers.interopDefault(_contact);
 var _error = require("./component/Error");
 var _errorDefault = parcelHelpers.interopDefault(_error);
+var _restaurantMenu = require("./component/RestaurantMenu");
+var _restaurantMenuDefault = parcelHelpers.interopDefault(_restaurantMenu);
 var _reactRouterDom = require("react-router-dom");
 const AppLayout = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -2974,18 +2976,18 @@ const AppLayout = ()=>{
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
                 fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/app.js",
-                lineNumber: 12,
+                lineNumber: 14,
                 columnNumber: 7
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
                 fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/app.js",
-                lineNumber: 13,
+                lineNumber: 15,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/app.js",
-        lineNumber: 11,
+        lineNumber: 12,
         columnNumber: 5
     }, undefined);
 };
@@ -2995,29 +2997,48 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
         path: "/",
         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
             fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/app.js",
-            lineNumber: 21,
+            lineNumber: 23,
             columnNumber: 14
         }, undefined),
+        children: [
+            {
+                path: "/",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
+                    fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/app.js",
+                    lineNumber: 27,
+                    columnNumber: 17
+                }, undefined)
+            },
+            {
+                path: "/about",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutDefault.default), {}, void 0, false, {
+                    fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/app.js",
+                    lineNumber: 31,
+                    columnNumber: 16
+                }, undefined)
+            },
+            {
+                path: "/contact",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contactDefault.default), {}, void 0, false, {
+                    fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/app.js",
+                    lineNumber: 35,
+                    columnNumber: 15
+                }, undefined)
+            },
+            {
+                // (:) it gives a dynamic path 
+                path: "/restaurants/:resId",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantMenuDefault.default), {}, void 0, false, {
+                    fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/app.js",
+                    lineNumber: 40,
+                    columnNumber: 15
+                }, undefined)
+            }
+        ],
         errorElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _errorDefault.default), {}, void 0, false, {
             fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/app.js",
-            lineNumber: 22,
-            columnNumber: 18
-        }, undefined)
-    },
-    {
-        path: "/about",
-        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutDefault.default), {}, void 0, false, {
-            fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/app.js",
-            lineNumber: 26,
-            columnNumber: 14
-        }, undefined)
-    },
-    {
-        path: "/contact",
-        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contactDefault.default), {}, void 0, false, {
-            fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/app.js",
-            lineNumber: 30,
-            columnNumber: 13
+            lineNumber: 43,
+            columnNumber: 20
         }, undefined)
     }
 ]);
@@ -3026,7 +3047,7 @@ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.RouterP
     router: appRouter
 }, void 0, false, {
     fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/app.js",
-    lineNumber: 35,
+    lineNumber: 48,
     columnNumber: 13
 }, undefined));
 var _c;
@@ -3037,7 +3058,7 @@ $RefreshReg$(_c, "AppLayout");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./component/Header":"lhr2r","./component/Body":"9DkT6","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe","./component/About":"hvsKZ","./component/Contact":"e4FXC","./component/Error":"bi2Z5"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./component/Header":"lhr2r","./component/Body":"9DkT6","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe","./component/About":"hvsKZ","./component/Contact":"e4FXC","./component/Error":"bi2Z5","./component/RestaurantMenu":"biv8Z"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -27293,6 +27314,7 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _constants = require("../utils/constants");
 var _indexCss = require("../../index.css");
 var _react = require("react");
+var _reactRouterDom = require("react-router-dom");
 var _s = $RefreshSig$();
 const Header = ()=>{
     _s();
@@ -27301,7 +27323,7 @@ const Header = ()=>{
     console.log("header render");
     //if there is no dependency array then useEffect is called after every render
     //if dependency array is empty then useEffect is called only on initial render
-    //if we put something in dependency array then useEffect is only called when dependency changes 
+    //if we put something in dependency array then useEffect is only called when dependency changes
     (0, _react.useEffect)(()=>{
         console.log("useEffect called");
     }, [
@@ -27317,12 +27339,12 @@ const Header = ()=>{
                     src: (0, _constants.LOGO_URL)
                 }, void 0, false, {
                     fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Header.js",
-                    lineNumber: 17,
+                    lineNumber: 18,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Header.js",
-                lineNumber: 16,
+                lineNumber: 17,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27330,31 +27352,52 @@ const Header = ()=>{
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: "Home"
-                        }, void 0, false, {
-                            fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Header.js",
-                            lineNumber: 21,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: "About Us"
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                to: "/",
+                                children: "Home"
+                            }, void 0, false, {
+                                fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Header.js",
+                                lineNumber: 23,
+                                columnNumber: 13
+                            }, undefined)
                         }, void 0, false, {
                             fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Header.js",
                             lineNumber: 22,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: "Contact Us"
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                to: "/About",
+                                children: "About Us"
+                            }, void 0, false, {
+                                fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Header.js",
+                                lineNumber: 26,
+                                columnNumber: 13
+                            }, undefined)
                         }, void 0, false, {
                             fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Header.js",
-                            lineNumber: 23,
+                            lineNumber: 25,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                to: "/Contact",
+                                children: "Contact Us"
+                            }, void 0, false, {
+                                fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Header.js",
+                                lineNumber: 29,
+                                columnNumber: 13
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Header.js",
+                            lineNumber: 28,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: "Cart"
                         }, void 0, false, {
                             fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Header.js",
-                            lineNumber: 24,
+                            lineNumber: 31,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -27366,24 +27409,24 @@ const Header = ()=>{
                             children: btnNameReact
                         }, void 0, false, {
                             fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Header.js",
-                            lineNumber: 25,
+                            lineNumber: 32,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Header.js",
-                    lineNumber: 20,
+                    lineNumber: 21,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Header.js",
-                lineNumber: 19,
+                lineNumber: 20,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Header.js",
-        lineNumber: 15,
+        lineNumber: 16,
         columnNumber: 5
     }, undefined);
 };
@@ -27398,17 +27441,19 @@ $RefreshReg$(_c, "Header");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","../utils/constants":"gDxO7","../../index.css":"4J5Tt","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gDxO7":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","../utils/constants":"gDxO7","../../index.css":"4J5Tt","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe"}],"gDxO7":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "CDN_URL", ()=>CDN_URL);
 parcelHelpers.export(exports, "styleCard", ()=>styleCard);
 parcelHelpers.export(exports, "LOGO_URL", ()=>LOGO_URL);
+parcelHelpers.export(exports, "MENU_API", ()=>MENU_API);
 const CDN_URL = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
 const styleCard = {
     backgroundColor: "#fff"
 };
 const LOGO_URL = "https://www.logodesign.net/logo/smoking-burger-with-lettuce-3624ld.png?nwm=1&nws=1&industry=fast-food&sf=&txt_keyword=All";
+const MENU_API = "https://www.swiggy.com/mapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=27.5059311&lng=77.66077109999999&restaurantId=";
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
@@ -27578,542 +27623,7 @@ function registerExportsForReactRefresh(module1) {
     }
 }
 
-},{"7422ead32dcc1e6b":"786KC"}],"9DkT6":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$1ee2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$1ee2.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _restaurantCard = require("./RestaurantCard");
-var _restaurantCardDefault = parcelHelpers.interopDefault(_restaurantCard);
-var _react = require("react");
-var _indexCss = require("../../index.css");
-var _shimmer = require("./Shimmer");
-var _shimmerDefault = parcelHelpers.interopDefault(_shimmer);
-var _s = $RefreshSig$();
-const Body = ()=>{
-    _s();
-    const [listOfRestaurants, setListOfRestaurant] = (0, _react.useState)([]);
-    const [filteredRestaurant, setFilteredRestaurant] = (0, _react.useState)([]);
-    const [searchText, setSearchText] = (0, _react.useState)("");
-    //Whenever state variable update, react triggers a reconcilation cycle(re-renders a component)
-    console.log("body rendered");
-    (0, _react.useEffect)(()=>{
-        fetchData();
-    }, []);
-    const fetchData = async ()=>{
-        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=27.4976751&lng=77.657273&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
-        const json = await data.json();
-        setListOfRestaurant(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-        setFilteredRestaurant(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-    };
-    //condition rendering -: render on the basis of condition
-    //  if(listOfRestaurants.length===0)
-    //  {
-    //   return <Shimmer/>
-    //  }
-    // } catch (error) {
-    //   setListOfRestaurant([]);
-    // }
-    return listOfRestaurants.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
-        fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Body.js",
-        lineNumber: 39,
-        columnNumber: 5
-    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "body",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "filter",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "search",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                type: "text",
-                                className: "search-box",
-                                value: searchText,
-                                onChange: (e)=>{
-                                    setSearchText(e.target.value);
-                                }
-                            }, void 0, false, {
-                                fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Body.js",
-                                lineNumber: 44,
-                                columnNumber: 11
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                onClick: ()=>{
-                                    const filteredRestaurant = listOfRestaurants.filter((res)=>res.info.name.toLowerCase().includes(searchText.toLowerCase()));
-                                    setFilteredRestaurant(filteredRestaurant);
-                                },
-                                children: "Search"
-                            }, void 0, false, {
-                                fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Body.js",
-                                lineNumber: 52,
-                                columnNumber: 11
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Body.js",
-                        lineNumber: 43,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: "filter-btn ",
-                        onClick: ()=>{
-                            const filteredList = listOfRestaurants.filter((res)=>res.info.avgRatingString >= 4);
-                            console.log(filteredList);
-                            // Updating State from Local State Variable
-                            setListOfRestaurant(filteredList);
-                        },
-                        children: "Top Rated Restaurants"
-                    }, void 0, false, {
-                        fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Body.js",
-                        lineNumber: 68,
-                        columnNumber: 9
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Body.js",
-                lineNumber: 42,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "rest-container",
-                style: {
-                    display: "flex",
-                    flexWrap: "wrap",
-                    gap: "75px"
-                },
-                children: filteredRestaurant.map((restaurant)=>//! You have to always mention unique key over here
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCardDefault.default), {
-                        restData: restaurant
-                    }, restaurant.info.id, false, {
-                        fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Body.js",
-                        lineNumber: 89,
-                        columnNumber: 11
-                    }, undefined))
-            }, void 0, false, {
-                fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Body.js",
-                lineNumber: 82,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Body.js",
-        lineNumber: 41,
-        columnNumber: 5
-    }, undefined);
-};
-_s(Body, "831an+32fzdb9Pfqahl47Qg1Jwg=");
-_c = Body;
-exports.default = Body;
-var _c;
-$RefreshReg$(_c, "Body");
-
-  $parcel$ReactRefreshHelpers$1ee2.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","./RestaurantCard":"kthSp","react":"21dqq","../../index.css":"4J5Tt","./Shimmer":"jNNUT","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kthSp":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$d9d4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$d9d4.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _constants = require("../utils/constants");
-var _indexCss = require("../../index.css");
-const RestaurantCard = (props)=>{
-    // console.log(props);
-    // Object Destructuring
-    const { restData } = props;
-    const { cloudinaryImageId, name, avgRatingString, cuisines, costForTwo, locality } = restData?.info;
-    const { lastMileTravelString } = restData?.info?.sla;
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "rest-card",
-        style: (0, _constants.styleCard),
-        "data-aos": "zoom-in",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "food-img",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                    src: (0, _constants.CDN_URL) + cloudinaryImageId,
-                    alt: "Shankar Foods"
-                }, void 0, false, {
-                    fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantCard.js",
-                    lineNumber: 22,
-                    columnNumber: 9
-                }, undefined)
-            }, void 0, false, {
-                fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantCard.js",
-                lineNumber: 21,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "food-info",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "nameAndRating",
-                        style: {
-                            display: "flex",
-                            justifyContent: "space-between"
-                        },
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "name",
-                                style: {
-                                    margin: "0.5rem 0px 0.37rem"
-                                },
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                                    style: {
-                                        margin: "unset"
-                                    },
-                                    children: name
-                                }, void 0, false, {
-                                    fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantCard.js",
-                                    lineNumber: 30,
-                                    columnNumber: 13
-                                }, undefined)
-                            }, void 0, false, {
-                                fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantCard.js",
-                                lineNumber: 29,
-                                columnNumber: 11
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "rating",
-                                style: {
-                                    maxWidth: "16%",
-                                    display: "flex",
-                                    alignItems: "center"
-                                },
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "rating-box",
-                                    style: {
-                                        backgroundColor: "green",
-                                        display: "flex",
-                                        gap: "1px",
-                                        padding: "4px",
-                                        borderRadius: "5px"
-                                    },
-                                    children: [
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                            className: "rating-number",
-                                            style: {
-                                                color: "#fff"
-                                            },
-                                            children: avgRatingString
-                                        }, void 0, false, {
-                                            fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantCard.js",
-                                            lineNumber: 46,
-                                            columnNumber: 15
-                                        }, undefined),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                            className: "star",
-                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                                                className: "sc-rbbb40-1 iFnyeo",
-                                                color: "#FFFFFF",
-                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                                                    xmlns: "http://www.w3.org/2000/svg",
-                                                    fill: "#FFFFFF",
-                                                    width: "0.8rem",
-                                                    height: "0.6rem",
-                                                    viewBox: "0 0 20 20",
-                                                    "aria-labelledby": "icon-svg-title- icon-svg-desc-",
-                                                    role: "img",
-                                                    className: "sc-rbbb40-0 fauQLv",
-                                                    children: [
-                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("title", {
-                                                            children: "star-fill"
-                                                        }, void 0, false, {
-                                                            fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantCard.js",
-                                                            lineNumber: 61,
-                                                            columnNumber: 21
-                                                        }, undefined),
-                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                                            d: "M6.76 6.8l-6.38 0.96c-0.22 0.040-0.38 0.22-0.38 0.44 0 0.12 0.040 0.24 0.12 0.32v0l4.64 4.76-1.1 6.66c0 0.020 0 0.040 0 0.080 0 0.24 0.2 0.44 0.44 0.44 0.1 0 0.16-0.020 0.24-0.060v0l5.7-3.12 5.68 3.12c0.060 0.040 0.14 0.060 0.22 0.060 0.24 0 0.44-0.2 0.44-0.44 0-0.040 0-0.060 0-0.080v0l-1.1-6.66 4.64-4.76c0.080-0.080 0.12-0.2 0.12-0.32 0-0.22-0.16-0.4-0.36-0.44h-0.020l-6.38-0.96-2.96-6.18c-0.060-0.12-0.18-0.2-0.32-0.2s-0.26 0.080-0.32 0.2v0z"
-                                                        }, void 0, false, {
-                                                            fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantCard.js",
-                                                            lineNumber: 62,
-                                                            columnNumber: 21
-                                                        }, undefined)
-                                                    ]
-                                                }, void 0, true, {
-                                                    fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantCard.js",
-                                                    lineNumber: 51,
-                                                    columnNumber: 19
-                                                }, undefined)
-                                            }, void 0, false, {
-                                                fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantCard.js",
-                                                lineNumber: 50,
-                                                columnNumber: 17
-                                            }, undefined)
-                                        }, void 0, false, {
-                                            fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantCard.js",
-                                            lineNumber: 49,
-                                            columnNumber: 15
-                                        }, undefined)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantCard.js",
-                                    lineNumber: 36,
-                                    columnNumber: 13
-                                }, undefined)
-                            }, void 0, false, {
-                                fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantCard.js",
-                                lineNumber: 32,
-                                columnNumber: 11
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantCard.js",
-                        lineNumber: 25,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "cuisinesAndPrice",
-                        style: {
-                            display: "flex",
-                            justifyContent: "space-between"
-                        },
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "cuisines",
-                                style: {
-                                    margin: "0.5rem 0px 0.37rem"
-                                },
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                    style: {
-                                        margin: "unset",
-                                        width: "108.64px",
-                                        textOverflow: "ellipsis",
-                                        overflow: "hidden",
-                                        whiteSpace: "nowrap",
-                                        textAlign: "left"
-                                    },
-                                    children: cuisines.slice(1, 3).join(", ")
-                                }, void 0, false, {
-                                    fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantCard.js",
-                                    lineNumber: 77,
-                                    columnNumber: 13
-                                }, undefined)
-                            }, void 0, false, {
-                                fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantCard.js",
-                                lineNumber: 76,
-                                columnNumber: 11
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "price",
-                                style: {
-                                    margin: "7.5px"
-                                },
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                    style: {
-                                        margin: "unset",
-                                        width: "58.2px",
-                                        textOverflow: "ellipsis",
-                                        overflow: "hidden",
-                                        whiteSpace: "nowrap",
-                                        textAlign: "left"
-                                    },
-                                    children: costForTwo
-                                }, void 0, false, {
-                                    fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantCard.js",
-                                    lineNumber: 91,
-                                    columnNumber: 13
-                                }, undefined)
-                            }, void 0, false, {
-                                fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantCard.js",
-                                lineNumber: 90,
-                                columnNumber: 11
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantCard.js",
-                        lineNumber: 69,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "addressAndDistance",
-                        style: {
-                            display: "flex",
-                            justifyContent: "space-between"
-                        },
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "address",
-                                style: {
-                                    margin: "0.5rem 0px 0.37rem"
-                                },
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                    style: {
-                                        margin: "unset",
-                                        textOverflow: "ellipsis",
-                                        overflow: "hidden",
-                                        whiteSpace: "nowrap",
-                                        textAlign: "left"
-                                    },
-                                    children: locality
-                                }, void 0, false, {
-                                    fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantCard.js",
-                                    lineNumber: 113,
-                                    columnNumber: 13
-                                }, undefined)
-                            }, void 0, false, {
-                                fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantCard.js",
-                                lineNumber: 112,
-                                columnNumber: 11
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "distance",
-                                style: {
-                                    margin: "7.5px"
-                                },
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                    style: {
-                                        margin: "unset"
-                                    },
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
-                                        children: lastMileTravelString
-                                    }, void 0, false, {
-                                        fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantCard.js",
-                                        lineNumber: 127,
-                                        columnNumber: 15
-                                    }, undefined)
-                                }, void 0, false, {
-                                    fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantCard.js",
-                                    lineNumber: 126,
-                                    columnNumber: 13
-                                }, undefined)
-                            }, void 0, false, {
-                                fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantCard.js",
-                                lineNumber: 125,
-                                columnNumber: 11
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantCard.js",
-                        lineNumber: 105,
-                        columnNumber: 9
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantCard.js",
-                lineNumber: 24,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantCard.js",
-        lineNumber: 20,
-        columnNumber: 5
-    }, undefined);
-};
-_c = RestaurantCard;
-exports.default = RestaurantCard;
-var _c;
-$RefreshReg$(_c, "RestaurantCard");
-
-  $parcel$ReactRefreshHelpers$d9d4.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","../utils/constants":"gDxO7","../../index.css":"4J5Tt","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4J5Tt":[function() {},{}],"4J5Tt":[function() {},{}],"jNNUT":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$cad7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$cad7.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const Shimmer = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "shimmer-container",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer-card"
-            }, void 0, false, {
-                fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Shimmer.js",
-                lineNumber: 4,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer-card"
-            }, void 0, false, {
-                fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Shimmer.js",
-                lineNumber: 5,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer-card"
-            }, void 0, false, {
-                fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Shimmer.js",
-                lineNumber: 6,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer-card"
-            }, void 0, false, {
-                fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Shimmer.js",
-                lineNumber: 7,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer-card"
-            }, void 0, false, {
-                fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Shimmer.js",
-                lineNumber: 8,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer-card"
-            }, void 0, false, {
-                fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Shimmer.js",
-                lineNumber: 9,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer-card"
-            }, void 0, false, {
-                fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Shimmer.js",
-                lineNumber: 10,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer-card"
-            }, void 0, false, {
-                fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Shimmer.js",
-                lineNumber: 11,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Shimmer.js",
-        lineNumber: 3,
-        columnNumber: 5
-    }, undefined);
-};
-_c = Shimmer;
-exports.default = Shimmer;
-var _c;
-$RefreshReg$(_c, "Shimmer");
-
-  $parcel$ReactRefreshHelpers$cad7.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9xmpe":[function(require,module,exports) {
+},{"7422ead32dcc1e6b":"786KC"}],"9xmpe":[function(require,module,exports) {
 /**
  * React Router DOM v6.28.0
  *
@@ -35320,7 +34830,542 @@ function persistAppliedTransitions(_window, transitions) {
     }
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hvsKZ":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9DkT6":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$1ee2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$1ee2.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _restaurantCard = require("./RestaurantCard");
+var _restaurantCardDefault = parcelHelpers.interopDefault(_restaurantCard);
+var _react = require("react");
+var _indexCss = require("../../index.css");
+var _shimmer = require("./Shimmer");
+var _shimmerDefault = parcelHelpers.interopDefault(_shimmer);
+var _s = $RefreshSig$();
+const Body = ()=>{
+    _s();
+    const [listOfRestaurants, setListOfRestaurant] = (0, _react.useState)([]);
+    const [filteredRestaurant, setFilteredRestaurant] = (0, _react.useState)([]);
+    const [searchText, setSearchText] = (0, _react.useState)("");
+    //Whenever state variable update, react triggers a reconcilation cycle(re-renders a component)
+    console.log("body rendered");
+    (0, _react.useEffect)(()=>{
+        fetchData();
+    }, []);
+    const fetchData = async ()=>{
+        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=27.4976751&lng=77.657273&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+        const json = await data.json();
+        setListOfRestaurant(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setFilteredRestaurant(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    };
+    //condition rendering -: render on the basis of condition
+    //  if(listOfRestaurants.length===0)
+    //  {
+    //   return <Shimmer/>
+    //  }
+    // } catch (error) {
+    //   setListOfRestaurant([]);
+    // }
+    return listOfRestaurants.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
+        fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Body.js",
+        lineNumber: 39,
+        columnNumber: 5
+    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "body",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "filter",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "search",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                type: "text",
+                                className: "search-box",
+                                value: searchText,
+                                onChange: (e)=>{
+                                    setSearchText(e.target.value);
+                                }
+                            }, void 0, false, {
+                                fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Body.js",
+                                lineNumber: 44,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                onClick: ()=>{
+                                    const filteredRestaurant = listOfRestaurants.filter((res)=>res.info.name.toLowerCase().includes(searchText.toLowerCase()));
+                                    setFilteredRestaurant(filteredRestaurant);
+                                },
+                                children: "Search"
+                            }, void 0, false, {
+                                fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Body.js",
+                                lineNumber: 52,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Body.js",
+                        lineNumber: 43,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "filter-btn ",
+                        onClick: ()=>{
+                            const filteredList = listOfRestaurants.filter((res)=>res.info.avgRatingString >= 4);
+                            console.log(filteredList);
+                            // Updating State from Local State Variable
+                            setListOfRestaurant(filteredList);
+                        },
+                        children: "Top Rated Restaurants"
+                    }, void 0, false, {
+                        fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Body.js",
+                        lineNumber: 68,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Body.js",
+                lineNumber: 42,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "rest-container",
+                style: {
+                    display: "flex",
+                    flexWrap: "wrap",
+                    gap: "75px"
+                },
+                children: filteredRestaurant.map((restaurant)=>//! You have to always mention unique key over here
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCardDefault.default), {
+                        restData: restaurant
+                    }, restaurant.info.id, false, {
+                        fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Body.js",
+                        lineNumber: 89,
+                        columnNumber: 11
+                    }, undefined))
+            }, void 0, false, {
+                fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Body.js",
+                lineNumber: 82,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Body.js",
+        lineNumber: 41,
+        columnNumber: 5
+    }, undefined);
+};
+_s(Body, "831an+32fzdb9Pfqahl47Qg1Jwg=");
+_c = Body;
+exports.default = Body;
+var _c;
+$RefreshReg$(_c, "Body");
+
+  $parcel$ReactRefreshHelpers$1ee2.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./RestaurantCard":"kthSp","../../index.css":"4J5Tt","./Shimmer":"jNNUT"}],"kthSp":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$d9d4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$d9d4.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _constants = require("../utils/constants");
+var _indexCss = require("../../index.css");
+const RestaurantCard = (props)=>{
+    // console.log(props);
+    // Object Destructuring
+    const { restData } = props;
+    const { cloudinaryImageId, name, avgRatingString, cuisines, costForTwo, locality } = restData?.info;
+    const { lastMileTravelString } = restData?.info?.sla;
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "rest-card",
+        style: (0, _constants.styleCard),
+        "data-aos": "zoom-in",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "food-img",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                    src: (0, _constants.CDN_URL) + cloudinaryImageId,
+                    alt: "Shankar Foods"
+                }, void 0, false, {
+                    fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantCard.js",
+                    lineNumber: 22,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
+                fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantCard.js",
+                lineNumber: 21,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "food-info",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "nameAndRating",
+                        style: {
+                            display: "flex",
+                            justifyContent: "space-between"
+                        },
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "name",
+                                style: {
+                                    margin: "0.5rem 0px 0.37rem"
+                                },
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                                    style: {
+                                        margin: "unset"
+                                    },
+                                    children: name
+                                }, void 0, false, {
+                                    fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantCard.js",
+                                    lineNumber: 30,
+                                    columnNumber: 13
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantCard.js",
+                                lineNumber: 29,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "rating",
+                                style: {
+                                    maxWidth: "16%",
+                                    display: "flex",
+                                    alignItems: "center"
+                                },
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "rating-box",
+                                    style: {
+                                        backgroundColor: "green",
+                                        display: "flex",
+                                        gap: "1px",
+                                        padding: "4px",
+                                        borderRadius: "5px"
+                                    },
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "rating-number",
+                                            style: {
+                                                color: "#fff"
+                                            },
+                                            children: avgRatingString
+                                        }, void 0, false, {
+                                            fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantCard.js",
+                                            lineNumber: 46,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "star",
+                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                                className: "sc-rbbb40-1 iFnyeo",
+                                                color: "#FFFFFF",
+                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                                    xmlns: "http://www.w3.org/2000/svg",
+                                                    fill: "#FFFFFF",
+                                                    width: "0.8rem",
+                                                    height: "0.6rem",
+                                                    viewBox: "0 0 20 20",
+                                                    "aria-labelledby": "icon-svg-title- icon-svg-desc-",
+                                                    role: "img",
+                                                    className: "sc-rbbb40-0 fauQLv",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("title", {
+                                                            children: "star-fill"
+                                                        }, void 0, false, {
+                                                            fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantCard.js",
+                                                            lineNumber: 61,
+                                                            columnNumber: 21
+                                                        }, undefined),
+                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                                            d: "M6.76 6.8l-6.38 0.96c-0.22 0.040-0.38 0.22-0.38 0.44 0 0.12 0.040 0.24 0.12 0.32v0l4.64 4.76-1.1 6.66c0 0.020 0 0.040 0 0.080 0 0.24 0.2 0.44 0.44 0.44 0.1 0 0.16-0.020 0.24-0.060v0l5.7-3.12 5.68 3.12c0.060 0.040 0.14 0.060 0.22 0.060 0.24 0 0.44-0.2 0.44-0.44 0-0.040 0-0.060 0-0.080v0l-1.1-6.66 4.64-4.76c0.080-0.080 0.12-0.2 0.12-0.32 0-0.22-0.16-0.4-0.36-0.44h-0.020l-6.38-0.96-2.96-6.18c-0.060-0.12-0.18-0.2-0.32-0.2s-0.26 0.080-0.32 0.2v0z"
+                                                        }, void 0, false, {
+                                                            fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantCard.js",
+                                                            lineNumber: 62,
+                                                            columnNumber: 21
+                                                        }, undefined)
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantCard.js",
+                                                    lineNumber: 51,
+                                                    columnNumber: 19
+                                                }, undefined)
+                                            }, void 0, false, {
+                                                fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantCard.js",
+                                                lineNumber: 50,
+                                                columnNumber: 17
+                                            }, undefined)
+                                        }, void 0, false, {
+                                            fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantCard.js",
+                                            lineNumber: 49,
+                                            columnNumber: 15
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantCard.js",
+                                    lineNumber: 36,
+                                    columnNumber: 13
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantCard.js",
+                                lineNumber: 32,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantCard.js",
+                        lineNumber: 25,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "cuisinesAndPrice",
+                        style: {
+                            display: "flex",
+                            justifyContent: "space-between"
+                        },
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "cuisines",
+                                style: {
+                                    margin: "0.5rem 0px 0.37rem"
+                                },
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                    style: {
+                                        margin: "unset",
+                                        width: "108.64px",
+                                        textOverflow: "ellipsis",
+                                        overflow: "hidden",
+                                        whiteSpace: "nowrap",
+                                        textAlign: "left"
+                                    },
+                                    children: cuisines.slice(1, 3).join(", ")
+                                }, void 0, false, {
+                                    fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantCard.js",
+                                    lineNumber: 77,
+                                    columnNumber: 13
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantCard.js",
+                                lineNumber: 76,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "price",
+                                style: {
+                                    margin: "7.5px"
+                                },
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                    style: {
+                                        margin: "unset",
+                                        width: "58.2px",
+                                        textOverflow: "ellipsis",
+                                        overflow: "hidden",
+                                        whiteSpace: "nowrap",
+                                        textAlign: "left"
+                                    },
+                                    children: costForTwo
+                                }, void 0, false, {
+                                    fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantCard.js",
+                                    lineNumber: 91,
+                                    columnNumber: 13
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantCard.js",
+                                lineNumber: 90,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantCard.js",
+                        lineNumber: 69,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "addressAndDistance",
+                        style: {
+                            display: "flex",
+                            justifyContent: "space-between"
+                        },
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "address",
+                                style: {
+                                    margin: "0.5rem 0px 0.37rem"
+                                },
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                    style: {
+                                        margin: "unset",
+                                        textOverflow: "ellipsis",
+                                        overflow: "hidden",
+                                        whiteSpace: "nowrap",
+                                        textAlign: "left"
+                                    },
+                                    children: locality
+                                }, void 0, false, {
+                                    fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantCard.js",
+                                    lineNumber: 113,
+                                    columnNumber: 13
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantCard.js",
+                                lineNumber: 112,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "distance",
+                                style: {
+                                    margin: "7.5px"
+                                },
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                    style: {
+                                        margin: "unset"
+                                    },
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                        children: lastMileTravelString
+                                    }, void 0, false, {
+                                        fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantCard.js",
+                                        lineNumber: 127,
+                                        columnNumber: 15
+                                    }, undefined)
+                                }, void 0, false, {
+                                    fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantCard.js",
+                                    lineNumber: 126,
+                                    columnNumber: 13
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantCard.js",
+                                lineNumber: 125,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantCard.js",
+                        lineNumber: 105,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantCard.js",
+                lineNumber: 24,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantCard.js",
+        lineNumber: 20,
+        columnNumber: 5
+    }, undefined);
+};
+_c = RestaurantCard;
+exports.default = RestaurantCard;
+var _c;
+$RefreshReg$(_c, "RestaurantCard");
+
+  $parcel$ReactRefreshHelpers$d9d4.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","../utils/constants":"gDxO7","../../index.css":"4J5Tt","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4J5Tt":[function() {},{}],"4J5Tt":[function() {},{}],"jNNUT":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$cad7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$cad7.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const Shimmer = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "shimmer-container",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card"
+            }, void 0, false, {
+                fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Shimmer.js",
+                lineNumber: 4,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card"
+            }, void 0, false, {
+                fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Shimmer.js",
+                lineNumber: 5,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card"
+            }, void 0, false, {
+                fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Shimmer.js",
+                lineNumber: 6,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card"
+            }, void 0, false, {
+                fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Shimmer.js",
+                lineNumber: 7,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card"
+            }, void 0, false, {
+                fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Shimmer.js",
+                lineNumber: 8,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card"
+            }, void 0, false, {
+                fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Shimmer.js",
+                lineNumber: 9,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card"
+            }, void 0, false, {
+                fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Shimmer.js",
+                lineNumber: 10,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card"
+            }, void 0, false, {
+                fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Shimmer.js",
+                lineNumber: 11,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/Shimmer.js",
+        lineNumber: 3,
+        columnNumber: 5
+    }, undefined);
+};
+_c = Shimmer;
+exports.default = Shimmer;
+var _c;
+$RefreshReg$(_c, "Shimmer");
+
+  $parcel$ReactRefreshHelpers$cad7.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"hvsKZ":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$ccb4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -35446,6 +35491,116 @@ $RefreshReg$(_c, "Error");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","react-router-dom":"9xmpe"}]},["dGwwW","1xC6H","eIh9w"], "eIh9w", "parcelRequire94c2")
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","react-router-dom":"9xmpe"}],"biv8Z":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$8d4d = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$8d4d.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _shimmer = require("./Shimmer");
+var _shimmerDefault = parcelHelpers.interopDefault(_shimmer);
+var _react = require("react");
+var _reactRouterDom = require("react-router-dom");
+var _constants = require("../utils/constants");
+var _s = $RefreshSig$();
+const RestaurantMenu = ()=>{
+    _s();
+    const [resInfo, setResInfo] = (0, _react.useState)(null);
+    const { resId } = (0, _reactRouterDom.useParams)(); // This will provide you to fetch resId from API link, Here "paramas" is a object containing resId
+    // console.log(resId); // display resId in console
+    (0, _react.useEffect)(()=>{
+        fetchMenu();
+    }, []);
+    const fetchMenu = async ()=>{
+        const data = await fetch((0, _constants.MENU_API) + resId); //fetching api
+        const json = await data.json();
+        console.log(json);
+        setResInfo(json.data);
+    };
+    if (resInfo === null) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
+        fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantMenu.js",
+        lineNumber: 27,
+        columnNumber: 12
+    }, undefined);
+    const { name, cuisines, costForTwoMessage } = resInfo?.cards[2]?.card?.card?.info;
+    const { itemCards } = resInfo?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
+    console.log(itemCards);
+    // const { recommendedItemCards } = recommmended?.card?.card?.itemCards;
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "menu",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                children: name
+            }, void 0, false, {
+                fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantMenu.js",
+                lineNumber: 41,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: [
+                    cuisines.join(", "),
+                    " - ",
+                    costForTwoMessage
+                ]
+            }, void 0, true, {
+                fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantMenu.js",
+                lineNumber: 42,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                children: "Menu"
+            }, void 0, false, {
+                fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantMenu.js",
+                lineNumber: 45,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                children: itemCards.map((item)=>{
+                    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                        children: [
+                            " ",
+                            item.card.info.name,
+                            " - \u20B9",
+                            item.card.info.price / 100,
+                            " "
+                        ]
+                    }, item.card.info.id, true, {
+                        fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantMenu.js",
+                        lineNumber: 49,
+                        columnNumber: 13
+                    }, undefined);
+                })
+            }, void 0, false, {
+                fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantMenu.js",
+                lineNumber: 46,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "OneDrive/Desktop/learning react/episode-7 Finding the path/src/component/RestaurantMenu.js",
+        lineNumber: 40,
+        columnNumber: 5
+    }, undefined);
+};
+_s(RestaurantMenu, "Di9ZLy8XXUjRliClMcx4U9YqD/w=", false, function() {
+    return [
+        (0, _reactRouterDom.useParams)
+    ];
+});
+_c = RestaurantMenu;
+exports.default = RestaurantMenu;
+var _c;
+$RefreshReg$(_c, "RestaurantMenu");
+
+  $parcel$ReactRefreshHelpers$8d4d.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","react-router-dom":"9xmpe","../utils/constants":"gDxO7","./Shimmer":"jNNUT"}]},["dGwwW","1xC6H","eIh9w"], "eIh9w", "parcelRequire94c2")
 
 //# sourceMappingURL=index.de022dda.js.map
