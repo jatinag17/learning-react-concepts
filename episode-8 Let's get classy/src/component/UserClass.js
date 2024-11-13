@@ -10,6 +10,9 @@ constructor(props) {
     // console.log(props);
     console.log("Child Constructor");
 }
+componentDidMount(){
+    console.log("Child Component Did Mount");
+}
 render() {
     const { name } = this.props;
     const { count } = this.state;
