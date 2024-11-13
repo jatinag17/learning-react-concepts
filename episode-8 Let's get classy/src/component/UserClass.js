@@ -8,10 +8,12 @@ constructor(props) {
     count2: 50,
     };
     // console.log(props);
+    console.log("Child Constructor");
 }
 render() {
     const { name } = this.props;
-    const { count  } = this.state;
+    const { count } = this.state;
+    console.log("Child Render");
     return (
     <div className="user-card">
         <h1>Count: {count}</h1>
