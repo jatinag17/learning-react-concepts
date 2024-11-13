@@ -5,7 +5,7 @@ const About = () => {
     <div>
       <h1>About</h1>
       <h2>This is Namaste React Web Series.</h2>
-      <User name={"Jatin Agrawal(function)"} />
+      {/* <User name={"Jatin Agrawal(function)"} /> */}
       <UserClass name={"Jatin Agrawal(class)"} />
     </div>
   );
