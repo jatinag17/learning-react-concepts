@@ -2,6 +2,7 @@ import RestaurantCard from "./RestaurantCard";
 import { useState, useEffect } from "react";
 import "../../index.css";
 import Shimmer from "./Shimmer";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurant] = useState([]);
@@ -25,6 +26,9 @@ const Body = () => {
       json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
+  const OnlineStatus=useOnlineStatus();
+  if(OnlineStatus===false) return (<h1>Looks Like you're offline!!!</h1>
+  );
   //condition rendering -: render on the basis of condition
   //  if(listOfRestaurants.length===0)
   //  {

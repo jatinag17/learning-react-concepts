@@ -1,26 +1,17 @@
 import Shimmer from "./Shimmer";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { MENU_API } from "../utils/constants";
-const RestaurantMenu = () => {
-  const [resInfo, setResInfo] = useState(null);
 
-  const { resId } = useParams(); // This will provide you to fetch resId from API link, Here "paramas" is a object containing resId
+import useRestaurantMenu from "../utils/useRestaurantMenu";
+const RestaurantMenu = () => {
+  // const [resInfo, setResInfo] = useState(null);
+const { resId } = useParams(); // This will provide you to fetch resId from API link, Here "params" is a object containing resId
+  const resInfo= useRestaurantMenu(resId)
+//in this useRestaurantMenu will be treated as custom hook made by us 
 
   // console.log(resId); // display resId in console
 
-  useEffect(() => {
-    fetchMenu();
-  }, []);
-
-  const fetchMenu = async () => {
-    const data = await fetch(MENU_API + resId); //fetching api
-    const json = await data.json();
-
-    console.log(json);
-
-    setResInfo(json.data);
-  };
+  
 
   if (resInfo === null) {
     return <Shimmer />;
@@ -30,11 +21,7 @@ const RestaurantMenu = () => {
 
   const { itemCards } =
     resInfo?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
-
   console.log(itemCards);
-
-  // const { recommendedItemCards } = recommmended?.card?.card?.itemCards;
-
   return (
     <div className="menu">
       <h1>{name}</h1>
@@ -55,5 +42,4 @@ const RestaurantMenu = () => {
     </div>
   );
 };
-
 export default RestaurantMenu;
