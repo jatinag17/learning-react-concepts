@@ -21,17 +21,18 @@ const onlineStatus=useOnlineStatus();
       </div>
       <div className="nav-items">
         <ul>
-          <li>
-            Online Status:{onlineStatus ? "✅":"❌"}
-          </li>
+          <li>Online Status:{onlineStatus ? "✅" : "❌"}</li>
           <li>
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/About">About Us</Link>
+            <Link to="/about">About Us</Link>
           </li>
           <li>
-            <Link to="/Contact">Contact Us</Link>
+            <Link to="/contact">Contact Us</Link>
+          </li>
+          <li>
+            <Link to="/grocery">Grocery</Link>
           </li>
           <li>Cart</li>
           <button
