@@ -1,30 +1,27 @@
 {
   "name": "episode-04---talk-is-cheap-show-me-the-code",
   "version": "1.0.0",
-  "description": "react",
-  "main": "app.js",
+  "description": "Episode 04 - Talk is Cheap, Show me the Code!",
   "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jatinag17/learning-react-concepts.git"
-  },
   "keywords": [
-    "react"
+    "React",
+    "NamasteReact"
   ],
-  "author": "jatin ag",
+  "author": "Jatin Agrawal",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jatinag17/learning-react-concepts/issues"
-  },
-  "homepage": "https://github.com/jatinag17/learning-react-concepts#readme",
   "devDependencies": {
     "parcel": "^2.12.0",
     "process": "^0.11.10"
   },
   "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
-  }
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "browserlist": [
+    "last 2 versions"
+  ]
 }
