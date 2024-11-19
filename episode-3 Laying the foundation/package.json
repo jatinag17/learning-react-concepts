@@ -1,32 +1,27 @@
 {
-  "name": "episode-3-laying-the-foundation",
+  "name": "episode-03---laying-the-foundation",
   "version": "1.0.0",
-  "description": "react",
-  "main": "index.js",
+  "description": "Episode 03 - Laying the foundation",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
-    "test": "bash"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jatinag17/learning-react-concepts.git"
+    "test": "jest"
   },
   "keywords": [
-    "react"
+    "React",
+    "NamasteReact"
   ],
-  "author": "jatin ag",
+  "author": "Jatin Agrawal",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jatinag17/learning-react-concepts/issues"
-  },
-  "homepage": "https://github.com/jatinag17/learning-react-concepts#readme",
   "devDependencies": {
     "parcel": "^2.12.0",
     "process": "^0.11.10"
   },
   "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
-  }
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "browserlist": [
+    "last 2 versions"
+  ]
 }
