@@ -1,53 +1,60 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-// React.createElement => object => HTMLElement(render)
-// const heading = React.createElement(
-//   "h1",
-//   { id: "heading" },
-//   "Namaste React 🚀"
-// );
 
-const Title=()=>
-(
-  <h1>title tag</h1>
+//! React Element
+
+//? Understand how to put ReactElement inside ReactElement
+const elem = <span>React Element</span>;
+
+const heading = (
+  <h1 className="head1" tabIndex="1">
+    {elem}
+    <br />
+    Namaste React By Akshay Saini ✅
+  </h1>
 );
 
+console.log(heading); // Object
 
+//! React Components:-
 
+//? React Functional Component
 
+const Title = function () {
+  return (
+    <h1 className="head2" tabIndex="5">
+      Namaste React using JSX 🚀
+    </h1>
+  );
+};
 
-// jsx (transpiled before it reaches the js)--PARCEL-Babel
-// jsx =>React.createElement=>ReactElement- JS Object=>HTMLElement(render)
-// babel used to convert jsx to React.createElement 
-//Babel is a JS Compiler
-// babel is a transpiler(source code to another source code )
-// const jsxheading =<h1 id="heading">Namaste react using jsx </h1>
+// How to render Title Component inside this HeadingComponent?
+//! Component Comosition
 
+//? We can write any JavaScript expression inside the {} in JSX
 
-
-
-
-
-
-// React Component
-// class-Based Component =>old
-// Funtional Component =>is a normal JS function 
-
-const data =api.getData(); // cross site scripting
-const HeadingComponent = ()=>
-(
+//? Understand how to put ReactElement inside the JSX Functional Component
+const HeadingComponent = () => (
   <div id="container">
+    {/* Adding ReactElement inside Functional Component */}
+    {heading}
 
-    {<Title/>
-    // <title></title> we can write like this also
-    
-    /*this a component compositon means component within the component */
-    }
-    <h2>{data}</h2>
- <h1 className="heading">namaste react Functional component</h1>
+    {/* // These below three things are same way to render Functional Component */}
+    <Title />
+    <Title></Title>
+
+    {/* You can also call Title function inside it in Curly braces {} */}
+
+    {Title()}
+
+    <h1 className="heading">Namaste React Functional Component</h1>
   </div>
 );
-// above code is witten like this also
-// const heading=return <h1>namaste react</h1> 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<HeadingComponent />); 
+
+const root = ReactDOM.createRoot(document.querySelector("#root"));
+
+// Render React Element
+// root.render(heading);
+
+// Render Functional Component
+root.render(<HeadingComponent />);
