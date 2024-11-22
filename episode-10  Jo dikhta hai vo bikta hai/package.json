@@ -1,0 +1,22 @@
+{
+  "name": "episode-10-jo-dikhta-hai-vo-bikta-hai",
+  "version": "1.0.0",
+  "description": "<p align=\"center\">Episode 05 - Let's get Hooked</p>",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "keywords": [
+    "React",
+    "NamasteReact"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "parcel": "^2.13.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0"
+  }
+}
