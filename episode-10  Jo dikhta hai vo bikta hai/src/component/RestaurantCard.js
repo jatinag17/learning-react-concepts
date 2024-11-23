@@ -17,13 +17,20 @@ const RestaurantCard = (props) => {
 
   const { lastMileTravelString } = restData?.info?.sla;
   return (
-    <div className="rest-card" style={styleCard} data-aos="zoom-in">
+    <div
+      className="m-4 p-4 w-[200px] bg-gray-100 rounded-lg shadow-xl hover:bg-gray-200"
+      data-aos="zoom-in"
+    >
       <div className="food-img">
-        <img src={CDN_URL + cloudinaryImageId} alt="Shankar Foods" />
+        <img
+          className="rounded-lg"
+          src={CDN_URL + cloudinaryImageId}
+          alt="Shankar Foods"
+        />
       </div>
-      <div className="food-info">
+      <div className="food-info text-pretty text-base">
         <div
-          className="nameAndRating"
+          className="nameAndRating font-semibold"
           style={{ display: "flex", justifyContent: "space-between" }}
         >
           <div className="name" style={{ margin: "0.5rem 0px 0.37rem" }}>

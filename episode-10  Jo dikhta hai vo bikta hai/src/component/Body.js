@@ -70,7 +70,7 @@ const Body = () => {
           </button>
         </div>
 
-        <div className="search m-2 p-4 flex items-center" >
+        <div className="search m-2 p-4 flex items-center">
           <button
             className="px-4 py-2 bg-stone-300 m-2 rounded-lg"
             onClick={() => {
@@ -86,10 +86,7 @@ const Body = () => {
           </button>
         </div>
       </div>
-      <div
-        className="rest-container"
-        style={{ display: "flex", flexWrap: "wrap", gap: "75px" }}
-      >
+      <div className="flex flex-wrap">
         {/* Looping restList using map */}
         {filteredRestaurant.map((restaurant) => (
           //! You have to always mention unique key over here
