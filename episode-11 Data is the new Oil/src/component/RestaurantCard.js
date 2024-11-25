@@ -95,16 +95,7 @@ const RestaurantCard = (props) => {
             </p>
           </div>
           <div className="price" style={{ margin: "7.5px" }}>
-            <p
-              style={{
-                margin: "unset",
-                width: "58.2px",
-                textOverflow: "ellipsis",
-                overflow: "hidden",
-                whiteSpace: "nowrap",
-                textAlign: "left",
-              }}
-            >
+            <p>
               {costForTwo}
             </p>
           </div>
@@ -139,5 +130,16 @@ const RestaurantCard = (props) => {
     </div>
   );
 };
-
+//higher order component
+ // input-: RestaurantCard=>RestaurantCardPromoted
+export const withPromotedLabel = (RestaurantCard) => {
+  return(props)=>{
+ return (
+  <div>
+    <label>Promoted</label>
+    <RestaurantCard{...props} />
+  </div>
+ )
+  }
+};
 export default RestaurantCard;

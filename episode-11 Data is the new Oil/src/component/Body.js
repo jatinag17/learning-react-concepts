@@ -1,4 +1,4 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard,{withPromotedLabel} from "./RestaurantCard";
 import { useState, useEffect } from "react";
 import "../../index.css";
 import Shimmer from "./Shimmer";
@@ -8,9 +8,9 @@ const Body = () => {
   const [listOfRestaurants, setListOfRestaurant] = useState([]);
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
   const [searchText, setSearchText] = useState("");
-
+const RestaurantCardPromoted=withPromotedLabel(RestaurantCard);
   //Whenever state variable update, react triggers a reconcilation cycle(re-renders a component)
-  console.log("body rendered");
+  console.log("body rendered",listOfRestaurants);
   useEffect(() => {
     fetchData();
   }, []);
@@ -89,10 +89,14 @@ const Body = () => {
       <div className="flex flex-wrap">
         {/* Looping restList using map */}
         {filteredRestaurant.map((restaurant) => (
-          //! You have to always mention unique key over here
-          <RestaurantCard key={restaurant.info.id} restData={restaurant} />
+        restaurant.info.promoted ? <RestaurantCardPromoted/>: <RestaurantCard key={restaurant.info.id} restData={restaurant} />
+
+
+       
+         // <RestaurantCard key={restaurant.info.id} restData={restaurant} />
 
           //* not using keys (not acceptable) <<<< index as key <<<<<<<<<<<<< unique id (best practice)
+          
         ))}
       </div>
     </div>
