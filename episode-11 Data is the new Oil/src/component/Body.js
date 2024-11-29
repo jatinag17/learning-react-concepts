@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import "../../index.css";
 import Shimmer from "./Shimmer";
 import useOnlineStatus from "../utils/useOnlineStatus";
-
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurant] = useState([]);
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
@@ -28,15 +27,7 @@ const RestaurantCardPromoted=withPromotedLabel(RestaurantCard);
   };
   const OnlineStatus = useOnlineStatus();
   if (OnlineStatus === false) return <h1>Looks Like you're offline!!!</h1>;
-  //condition rendering -: render on the basis of condition
-  //  if(listOfRestaurants.length===0)
-  //  {
-  //   return <Shimmer/>
-  //  }
-
-  // } catch (error) {
-  //   setListOfRestaurant([]);
-  // }
+  
 
   return listOfRestaurants.length === 0 ? (
     <Shimmer />
