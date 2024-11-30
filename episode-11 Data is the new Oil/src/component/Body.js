@@ -84,10 +84,7 @@ const RestaurantCardPromoted=withPromotedLabel(RestaurantCard);
 
 
        
-         // <RestaurantCard key={restaurant.info.id} restData={restaurant} />
-
-          //* not using keys (not acceptable) <<<< index as key <<<<<<<<<<<<< unique id (best practice)
-          
+         
         ))}
       </div>
     </div>
