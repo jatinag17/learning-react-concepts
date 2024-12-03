@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 const Header = () => {
-  // let btnName="login";
+  
   const [btnNameReact, setBtnNameReact] = useState("Login");
   console.log("header render");
   //if there is no dependency array then useEffect is called after every render
