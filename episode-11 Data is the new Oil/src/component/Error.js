@@ -1,6 +1,6 @@
 import React from "react";
 import { useRouteError } from "react-router-dom";
-
+// this will work when there is any error
 const Error = () => {
   return (
     <div>
