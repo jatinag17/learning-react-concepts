@@ -7,7 +7,6 @@ import About from "./component/About";
 import Contact from "./component/Contact";
 import Error from "./component/Error";
 import RestaurantMenu from "./component/RestaurantMenu";
-// import Grocery from "./component/Grocery";
 
 //Chunking
 //Code Splitting
