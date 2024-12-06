@@ -14,6 +14,7 @@ import RestaurantMenu from "./component/RestaurantMenu";
 //on demand loading
 //Dynamic Bundling
 //Dynamic
+//Make it clear to use
 
 const Grocery = lazy(() => import("./component/Grocery"));
 const AppLayout = () => {
