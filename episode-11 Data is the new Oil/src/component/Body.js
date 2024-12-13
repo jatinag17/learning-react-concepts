@@ -81,10 +81,6 @@ const RestaurantCardPromoted=withPromotedLabel(RestaurantCard);
         {/* Looping restList using map */}
         {filteredRestaurant.map((restaurant) => (
         restaurant.info.promoted ? <RestaurantCardPromoted/>: <RestaurantCard key={restaurant.info.id} restData={restaurant} />
-
-
-       
-         
         ))}
       </div>
     </div>
