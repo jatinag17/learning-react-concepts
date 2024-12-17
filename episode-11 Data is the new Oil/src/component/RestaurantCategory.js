@@ -23,7 +23,7 @@ const RestaurantCategory = ({ data, showItems, setShowIndex }) => {
 
         {showItems && <ItemsList items={data.itemCards} />}
       </div>
-      {/*Accordion Body */}
+      {/*Accordion Body is done to make attractive*/}
     </div>
   );
 };
