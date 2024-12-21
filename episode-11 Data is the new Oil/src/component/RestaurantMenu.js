@@ -6,6 +6,7 @@ import { useState} from "react";
 const RestaurantMenu = () => {
   // const [resInfo, setResInfo] = useState(null);
   const { resId } = useParams(); // This will provide you to fetch resId from API link, Here "params" is a object containing resId
+  const dummy ="Dummy data";
   const resInfo = useRestaurantMenu(resId);
   //in this useRestaurantMenu will be treated as custom hook made by us
 const [showIndex,setShowIndex] = useState(null);
@@ -41,6 +42,7 @@ const [showIndex,setShowIndex] = useState(null);
           key={category?.card?.card?.title}
           showItems={index === showIndex ? true : false}
           setShowIndex={() => setShowIndex(index)}
+          dummy={dummy}
         />
       ))}
     </div>

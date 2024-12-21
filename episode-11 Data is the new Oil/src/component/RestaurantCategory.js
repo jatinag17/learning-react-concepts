@@ -21,7 +21,7 @@ const RestaurantCategory = ({ data, showItems, setShowIndex }) => {
           <span>{showItems ? "⬇️" : "⬆️"}</span>
         </div>
 
-        {showItems && <ItemsList items={data.itemCards} />}
+        {showItems && <ItemsList items={data.itemCards} dummy={dummy}/>}
       </div>
       {/*Accordion Body is done to make attractive*/}
     </div>

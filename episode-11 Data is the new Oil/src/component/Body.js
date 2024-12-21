@@ -9,7 +9,7 @@ const Body = () => {
   const [searchText, setSearchText] = useState("");
 const RestaurantCardPromoted=withPromotedLabel(RestaurantCard);
   //Whenever state variable update, react triggers a reconcilation cycle(re-renders a component)
-  console.log("body rendered",listOfRestaurants);
+  // console.log("body rendered",listOfRestaurants);
   useEffect(() => {
     fetchData();
   }, []);
