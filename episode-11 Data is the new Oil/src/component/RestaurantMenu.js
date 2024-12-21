@@ -8,7 +8,7 @@ const RestaurantMenu = () => {
   const { resId } = useParams(); // This will provide you to fetch resId from API link, Here "params" is a object containing resId
   const resInfo = useRestaurantMenu(resId);
   //in this useRestaurantMenu will be treated as custom hook made by us
-
+const [showIndex,setShowIndex] = useState(null);
   // console.log(resId); // display resId in console
 
   if (resInfo === null) {

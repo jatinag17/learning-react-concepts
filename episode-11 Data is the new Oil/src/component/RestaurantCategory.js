@@ -1,7 +1,7 @@
-import ItemsList from "./ItemsList";
+import ItemsList from "./ItemList";
 import { useState } from "react";
 
-//! So this is now a Controlled Component, If the Restaurant Category Controlling itself it would have been a Unontrolled Component. If it doesn't have a power to Controlling itself then it is called to be Controlled Component.
+// So this is now a Controlled Component, If the Restaurant Category Controlling itself it would have been a Unontrolled Component. If it doesn't have a power to Controlling itself then it is called to be Controlled Component.
 
 const RestaurantCategory = ({ data, showItems, setShowIndex }) => {
   const handleClick = () => {
