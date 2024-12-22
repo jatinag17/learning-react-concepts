@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useState, useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Header from "./component/Header";
@@ -7,23 +7,29 @@ import About from "./component/About";
 import Contact from "./component/Contact";
 import Error from "./component/Error";
 import RestaurantMenu from "./component/RestaurantMenu";
+import UserContext from "./utils/userContext";
 
-//Chunking
-//Code Splitting
-//Lazy Loading
-//on demand loading
-//Dynamic Bundling
-//Dynamic
-//Make it clear to use
-
+// Lazy Loading Components
 const Grocery = lazy(() => import("./component/Grocery"));
+
 const AppLayout = () => {
+  const [userInfo, setUserInfo] = useState(null);
+
+  useEffect(() => {
+    // Simulate an API call to fetch user data
+    const data = {
+      name: "Jatin Agrawal",
+    };
+    setUserInfo(data.name);
+  }, []);
+
   return (
-    <div className="app">
-      {/*now header come along with contact,about etc...  */}
-      <Header />
-      <Outlet />
-    </div>
+    <UserContext.Provider value={{ loggedInUser: userInfo || "Guest" }}>
+      <div className="app">
+        <Header />
+        <Outlet />
+      </div>
+    </UserContext.Provider>
   );
 };
 
@@ -50,10 +56,9 @@ const appRouter = createBrowserRouter([
           <Suspense fallback={<h1>Loading....</h1>}>
             <Grocery />
           </Suspense>
-        ), // Load Contact Component when the route matches /contact
+        ),
       },
       {
-        // (:) it gives a dynamic path
         path: "/restaurants/:resId",
         element: <RestaurantMenu />,
       },

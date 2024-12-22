@@ -1,10 +1,13 @@
 import { CDN_URL, styleCard } from "../utils/constants";
 import "../../index.css";
+import { useContext } from "react";
+import UserContext from "../utils/userContext";
 
 const RestaurantCard = (props) => {
   // console.log(props);
   // Object Destructuring
   const { restData } = props;
+  const{loggedInUser}=useContext(UserContext);
 
   const {
     cloudinaryImageId,
@@ -95,9 +98,7 @@ const RestaurantCard = (props) => {
             </p>
           </div>
           <div className="price" style={{ margin: "7.5px" }}>
-            <p>
-              {costForTwo}
-            </p>
+            <p>{costForTwo}</p>
           </div>
         </div>
         <div
@@ -125,6 +126,9 @@ const RestaurantCard = (props) => {
               <b>{lastMileTravelString}</b>
             </p>
           </div>
+          <div >
+            <h4>User:{loggedInUser}</h4>
+          </div>
         </div>
       </div>
     </div>
@@ -140,6 +144,6 @@ export const withPromotedLabel = (RestaurantCard) => {
     <RestaurantCard{...props} />
   </div>
  )
-  }
+  };
 };
 export default RestaurantCard;
