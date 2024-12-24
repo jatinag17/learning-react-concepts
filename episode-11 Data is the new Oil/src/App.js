@@ -16,7 +16,7 @@ const AppLayout = () => {
   const [userInfo, setUserInfo] = useState(null);
 
   useEffect(() => {
-    // Simulate an API call to fetch user data
+    // Simulate an API call to fetch user data for a developer puprpose
     const data = {
       name: "Jatin Agrawal",
     };
