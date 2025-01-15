@@ -11,7 +11,7 @@ import RestaurantMenu from "./component/RestaurantMenu";
 
 //Chunking
 //Code Splitting
-//Lazy Loading
+//Lazy Loading  
 //on demand loading
 //Dynamic Bundling
 //Dynamic
